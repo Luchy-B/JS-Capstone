@@ -1,4 +1,26 @@
 {
+  "name": "js-capstone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "webpack --mode development",
+    "start": "webpack serve --open",
+    "build": "webpack --mode production",
+    "watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luchy-B/JS-Capstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luchy-B/JS-Capstone/issues"
+  },
+  "homepage": "https://github.com/Luchy-B/JS-Capstone#readme",
   "dependencies": {
     "abab": "^2.0.6",
     "abbrev": "^1.1.1",
