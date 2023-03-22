@@ -4,16 +4,18 @@ import INTERACTIONS from './api.js';
 
 const url = 'https://api.tvmaze.com/shows';
 const showsContainer = document.querySelector('.shows-container');
+const count = document.querySelector('#count');
 
 export default class SHOWS {
   static allShows = [];
+
     static getShows = async () => {
       const res = await fetch(url);
       const data = await res.json();
       return data;
     }
 
-    static getItemCount = () => SHOWS.allShows.length
+    static getItemCount = () => SHOWS.allShows.length;
 
     static getCommentCount = () => {
       let count = 0;
@@ -60,6 +62,7 @@ export default class SHOWS {
     static displayShows() {
       SHOWS.getShows().then((data) => {
         this.allShows = data;
+        count.textContent = `(${data.length})`;
         INTERACTIONS.getLikes().then((likes) => {
           if (likes.length) {
             SHOWS.newMovies(likes, data);
