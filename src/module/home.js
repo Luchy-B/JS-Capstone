@@ -6,10 +6,21 @@ const url = 'https://api.tvmaze.com/shows';
 const showsContainer = document.querySelector('.shows-container');
 
 export default class SHOWS {
+  static allShows = [];
     static getShows = async () => {
       const res = await fetch(url);
       const data = await res.json();
       return data;
+    }
+
+    static getItemCount = () => SHOWS.allShows.length
+
+    static getCommentCount = () => {
+      let count = 0;
+      SHOWS.allShows.forEach((show) => {
+        count += show.comments.length;
+      });
+      return count;
     }
 
     static renderMovies = (movies) => {
