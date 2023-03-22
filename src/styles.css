@@ -2,11 +2,21 @@
 
 *,
 html,
-body {
+/* body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+} */
+
+body {
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Poppins", sans-serif;
+  background-image: url(./Assets/BG.jpg);
+  color: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -45,8 +55,10 @@ nav {
 
 a {
   text-decoration: none;
-  color: #333;
+  /* color: #333; */
+  color: #fff;
   font-weight: bold;
+  font-size: 25px;
 }
 
 /* main {
@@ -123,6 +135,9 @@ a {
 .comment-btn {
   width: 85%;
   text-transform: capitalize;
+  height: 30px;
+  margin: 5px;
+  border: 2px solid gray;
 }
 
 /* ------------------------------------Popup---------------------------------------------------- */
