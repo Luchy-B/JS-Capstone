@@ -1,5 +1,6 @@
 /*eslint-disable */
-import jsdom from 'jsdom';
+
+const jsdom = require('jsdom');
 
 const { JSDOM } = jsdom;
 
@@ -26,4 +27,4 @@ const countMovies = () => {
   return movies.length;
 };
 
-export default countMovies;
+module.exports = countMovies;

@@ -11,7 +11,7 @@
     "watch": "jest --watch"
   },
   "jest":{
-    "testEnvironment": "jsdom"
+    "testEnvironment": "node"
 },
   "repository": {
     "type": "git",
