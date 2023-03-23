@@ -10,6 +10,9 @@
     "build": "webpack --mode production",
     "watch": "jest --watch"
   },
+  "jest":{
+    "testEnvironment": "jsdom"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Luchy-B/JS-Capstone.git"

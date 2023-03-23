@@ -1,5 +1,5 @@
 /* eslint import/no-cycle: 0 */
-import heart from '../Assets/images/heart.png';
+import heart from '../Assets/heart.png';
 import INTERACTIONS from './api.js';
 
 const url = 'https://api.tvmaze.com/shows';
