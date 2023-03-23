@@ -607,6 +607,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
     "@babel/preset-env": "^7.20.2",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^9.1.2",
@@ -617,6 +618,7 @@
     "hint": "^7.1.5",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "style-loader": "^3.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
