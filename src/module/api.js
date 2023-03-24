@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint import/no-cycle: 0 */
 
-import SHOWS from './home.js';
+import Shows from './home.js';
 
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 const appsEndPoint = '/apps/';
@@ -54,14 +54,14 @@ export default class Interactions {
       const id = e.target.getAttribute('id');
       Interactions.postLike(id).then((data) => {
         if (data === 'Created') {
-          if (SHOWS.allShows.length) {
-            const likedShow = SHOWS.allShows.find(
+          if (Shows.allShows.length) {
+            const likedShow = Shows.allShows.find(
               (show) => Number(show.id) === Number(id),
             );
             if (likedShow) {
               likedShow.likes += 1;
             }
-            SHOWS.renderMovies(SHOWS.allShows);
+            Shows.renderMovies(Shows.allShows);
           }
         }
       });

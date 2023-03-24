@@ -15,7 +15,7 @@ const comment = {
 };
 let submitbtn;
 
-export default class COMMENTS {
+export default class Comments {
   static createNewComment = () => {
     // eslint-disable-next-line consistent-return
     submitbtn.addEventListener('click', async (e) => {
@@ -72,7 +72,7 @@ export default class COMMENTS {
           const id = e.target.getAttribute('id');
           const detail = SHOWS.allShows.find((item) => Number(item.id) === Number(e.target.id));
           let detailResult = '';
-          COMMENTS.getComments(id).then((comments) => {
+          Comments.getComments(id).then((comments) => {
             if (comments.length) {
               JSON.parse(comments).forEach((comment) => {
                 detailResult += `<li class='userComment'>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
@@ -127,8 +127,8 @@ export default class COMMENTS {
             popUpOverlay.innerHTML = popup;
             popUpOverlay.classList.remove('remove-popup');
             submitbtn = document.querySelector('.submitbtn');
-            COMMENTS.createNewComment();
-            document.addEventListener('click', COMMENTS.displayPopUp);
+            Comments.createNewComment();
+            document.addEventListener('click', Comments.displayPopUp);
           });
         }
       }

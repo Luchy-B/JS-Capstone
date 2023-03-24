@@ -6,7 +6,7 @@ const url = 'https://api.tvmaze.com/shows';
 const showsContainer = document.querySelector('.shows-container');
 const count = document.querySelector('#count');
 
-export default class SHOWS {
+export default class Shows {
   static allShows = [];
 
     static getShows = async () => {
@@ -15,11 +15,11 @@ export default class SHOWS {
       return data;
     }
 
-    static getItemCount = () => SHOWS.allShows.length;
+    static getItemCount = () => Shows.allShows.length;
 
     static getCommentCount = () => {
       let count = 0;
-      SHOWS.allShows.forEach((show) => {
+      Shows.allShows.forEach((show) => {
         count += show.comments.length;
       });
       return count;
@@ -55,18 +55,18 @@ export default class SHOWS {
           likes: likedMovie ? likedMovie.likes : 0,
         };
       });
-      SHOWS.allShows = mappedMovies;
-      SHOWS.renderMovies(mappedMovies);
+      Shows.allShows = mappedMovies;
+      Shows.renderMovies(mappedMovies);
     }
 
     static displayShows() {
-      SHOWS.getShows().then((data) => {
+      Shows.getShows().then((data) => {
         this.allShows = data;
         count.textContent = `(${data.length})`;
         Interactions.getLikes().then((likes) => {
           if (likes.length) {
-            SHOWS.newMovies(likes, data);
-          } else { SHOWS.newMovies(data, data); }
+            Shows.newMovies(likes, data);
+          } else { Shows.newMovies(data, data); }
         });
       });
     }

@@ -1,20 +1,20 @@
 /* eslint import/extensions: 0 */
 
 import './styles.css';
-import SHOWS from './module/home.js';
+import Shows from './module/home.js';
 import Interactions from './module/api.js';
-import COMMENTS from './module/comments.js';
+import Comments from './module/comments.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   Interactions.createAppId();
-  SHOWS.displayShows();
+  Shows.displayShows();
   Interactions.getLikes();
-  COMMENTS.getComments();
+  Comments.getComments();
 });
 
 window.addEventListener('click', (e) => {
   e.preventDefault();
   Interactions.createNewLike(e);
   Interactions.removePopUp(e);
-  COMMENTS.displayPopUp(e);
+  Comments.displayPopUp(e);
 });
