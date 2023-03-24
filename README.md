@@ -5,6 +5,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
+  - [🚀 Video Presentation](#video-presentation)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -22,6 +23,7 @@
 **Movies series** is a project that has lists of movies. It has features wheere you can make comments and like a movie. It is built using API.
 
 ## 🛠 Built With<a name="built-with"></a>
+
 HTML
 CSS
 Javascript
@@ -45,6 +47,8 @@ Fullstack developer: includes both front end and Backend developer.
 
 ### Live Demo: (https://luchy-b.github.io/JS-Capstone/dist/)
 
+### Video Presentation: (https://drive.google.com/file/d/1iYIwJG1-8zsu9BqkS0PrSJntwEy5Qs6W/view?usp=share_link)
+
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps.
@@ -67,13 +71,13 @@ In order to run this project you need:
 
 To run the project, execute the following command:
 
-  live server
+live server
 
 ### Run tests
 
 To run tests, run the following command:
 
-  - run npm test
+- run npm test
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -84,12 +88,12 @@ To run tests, run the following command:
 - LinkedIn: [LinkedIn](https://linkedin.com/in/blessing)
 
 👤 **Author2**
+
 - GitHub: [@amanuelbelete95](https://github.com/amanuelbelete95)
 - Twitter: [@AmanuelBelete11](https://twitter.com/AmanuelBelete11)
 - LinkedIn: [Amanuel Belete](https://www.linkedin.com/in/amanuel-belete-292994194/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🔭 Future Features <a name="future-features"></a>
 
@@ -107,11 +111,9 @@ Contributions, issues, and feature requests are welcome!
 
 ## ⭐️ Show your support <a name="support"></a>
 
-
 If you like this project, kindly show your support by leaving a comment on how to improve.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
