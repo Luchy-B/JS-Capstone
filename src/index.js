@@ -2,20 +2,19 @@
 
 import './styles.css';
 import SHOWS from './module/home.js';
-import INTERACTIONS from './module/api.js';
+import Interactions from './module/api.js';
 import COMMENTS from './module/comments.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-  INTERACTIONS.createAppId();
+  Interactions.createAppId();
   SHOWS.displayShows();
-  INTERACTIONS.getLikes();
+  Interactions.getLikes();
   COMMENTS.getComments();
 });
 
 window.addEventListener('click', (e) => {
   e.preventDefault();
-  INTERACTIONS.createNewLike(e);
-  INTERACTIONS.removePopUp(e);
-
+  Interactions.createNewLike(e);
+  Interactions.removePopUp(e);
   COMMENTS.displayPopUp(e);
 });

@@ -1,7 +1,3 @@
-/* eslint-disable consistent-return */
-/* eslint import/no-cycle: 0 */
-// eslint-disable-next-line no-unused-vars
-// import { text } from '@fortawesome/fontawesome-svg-core';
 import SHOWS from './home.js';
 import closeIcon from '../Assets/closeIcon.png';
 
@@ -17,11 +13,11 @@ const comment = {
   username: '',
   comment: '',
 };
-
 let submitbtn;
 
 export default class COMMENTS {
   static createNewComment = () => {
+    // eslint-disable-next-line consistent-return
     submitbtn.addEventListener('click', async (e) => {
       const input = document.querySelector('.input');
       const cmt = document.querySelector('textarea.comment');
@@ -40,11 +36,14 @@ export default class COMMENTS {
           const data = await response.text();
           // Display the new comment on the screen
           const commentList = document.querySelector('.commentors');
-          const newComment = `<li>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
+          const newComment = `<li class='userComment'>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
           commentList.insertAdjacentHTML('beforeend', newComment);
           // Update the comment count
-          const commentCount = document.querySelector('#comments-count');
-          commentCount.textContent = JSON.parse(data).length;
+          setTimeout(() => {
+            const allComments = document.querySelectorAll('.userComment');
+            const commentCount = document.querySelector('#comments-count');
+            commentCount.textContent = allComments.length;
+          }, 500);
           return data;
         } catch (error) {
           return error;
@@ -76,7 +75,7 @@ export default class COMMENTS {
           COMMENTS.getComments(id).then((comments) => {
             if (comments.length) {
               JSON.parse(comments).forEach((comment) => {
-                detailResult += `<li>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
+                detailResult += `<li class='userComment'>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
               });
             }
 

@@ -10,7 +10,7 @@ const id = 'DJQ0xNDyZupm6FxK1BuA';
 
 const popUpOverlay = document.querySelector('.popup-overlay');
 
-export default class INTERACTIONS {
+export default class Interactions {
   static createAppId = async () => {
     try {
       const response = await fetch(baseUrl + appsEndPoint, {
@@ -52,7 +52,7 @@ export default class INTERACTIONS {
     if (e.target.classList.contains('heart')) {
       popUpOverlay.classList.add('remove-popup');
       const id = e.target.getAttribute('id');
-      INTERACTIONS.postLike(id).then((data) => {
+      Interactions.postLike(id).then((data) => {
         if (data === 'Created') {
           if (SHOWS.allShows.length) {
             const likedShow = SHOWS.allShows.find(

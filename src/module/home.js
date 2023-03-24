@@ -1,6 +1,6 @@
 /* eslint import/no-cycle: 0 */
 import heart from '../Assets/heart.png';
-import INTERACTIONS from './api.js';
+import Interactions from './api.js';
 
 const url = 'https://api.tvmaze.com/shows';
 const showsContainer = document.querySelector('.shows-container');
@@ -63,7 +63,7 @@ export default class SHOWS {
       SHOWS.getShows().then((data) => {
         this.allShows = data;
         count.textContent = `(${data.length})`;
-        INTERACTIONS.getLikes().then((likes) => {
+        Interactions.getLikes().then((likes) => {
           if (likes.length) {
             SHOWS.newMovies(likes, data);
           } else { SHOWS.newMovies(data, data); }
