@@ -8,11 +8,10 @@ html,
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 } */
-
 body {
   /* font-family: "Lato", sans-serif; */
   font-family: "Poppins", sans-serif;
-  background-image: url(./Assets/BG.jpg);
+  background-color: #333;
   color: white;
   box-sizing: border-box;
   margin: 0;
@@ -45,6 +44,7 @@ nav {
   display: grid;
   place-items: center;
 }
+
 .menu-wrap {
   display: flex;
   align-items: center;
@@ -55,6 +55,7 @@ nav {
 
 a {
   text-decoration: none;
+
   /* color: #333; */
   color: #fff;
   font-weight: bold;
