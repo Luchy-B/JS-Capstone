@@ -9,7 +9,6 @@ const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstone
 const appsEndPoint = '/apps/';
 const commentsEndPoint = '/comments/';
 const CommentEndPt = '/comments?item_id=';
-// const id = 'I6V7bvZujP0aYZDMyEjY';
 const id = 'LHFUkzcDvsXW9NARtYgJ';
 const popUpOverlay = document.querySelector('.popup-overlay');
 
